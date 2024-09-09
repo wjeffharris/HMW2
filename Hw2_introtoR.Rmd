@@ -1,0 +1,70 @@
+---
+title: "Homework 2 - Intro to R"
+author: "WILLIAM HARRIS"
+date: "DATA 2401"
+output: html_document
+---
+
+
+Due Sep 12th at 11:59 pm. Turn in the link to your repository to Canvas when you're done with the assignment (and make sure that you've committed and pushed to update the repository). Make sure to change the author name to your own above!
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Create a variable `hometown` that stores the city you consider your hometown as a string. 
+
+```{r}
+hometown <- "Dallas"
+```
+
+
+2. Assign your name to the variable `my_name`
+
+```{r}
+my_name <- "William"
+```
+
+3. Assign your height (in inches) to a variable `my_height`
+
+```{r}
+my_height <- 65
+```
+
+4. Create a variable `puppies` equal to the number of puppies you'd like to have
+
+```{r}
+puppies <- 1
+```
+
+5. Create a variable `puppy_price`, which is how much you think a puppy costs
+
+```{r}
+puppy_price <- 5000
+```
+
+6. Create a variable `total_cost` that has the total cost of all of your puppies (use the variables you created in the previous questions)
+
+```{r}
+total_cost <- puppies * puppy_price
+```
+
+7. Create a boolean variable `too_expensive`, that is set to TRUE if the cost is greater than $1,000 (use your variables created in the previous questions)
+
+```{r}
+too_expesnive <- total_cost > 1000
+
+```
+
+8. Create a variable `max_puppies`, which is the number of puppies you can afford for $1,000
+
+```{r}
+max_puppies <- 1000/total_cost
+```
+
+9.  We can't have partial puppies. Round `max_puppies` down to a whole number (you might use a function called `floor`, type `?floor` in your R console for more information), save that as a new variable `actual_max_puppies`
+
+```{r}
+print(floor(max_puppies))
+```
+
